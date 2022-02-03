@@ -10,13 +10,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="{미용실 이름}"
+            android:textSize="40dp"
+            />
+
 
         <TextView
             android:id="@+id/designer_tv_reservation_status"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="10dp"
             android:text="- 예약 현황 보기"
             android:textSize="16dp" />
 
@@ -25,7 +32,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="250dp"
             android:text="- 예약자 관리"
             android:textSize="16dp" />
 

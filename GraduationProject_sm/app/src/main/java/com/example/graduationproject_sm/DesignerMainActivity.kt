@@ -1,8 +1,12 @@
 package com.example.graduationproject_sm
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.MenuItem
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.example.graduationproject_sm.fragment.DesignerChattingFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -18,13 +22,16 @@ class DesignerMainActivity : AppCompatActivity(), BottomNavigationView.OnNavigat
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_designer_main)
-        title="디자이너 메인 페이지"
+
         bottomNavigationView = findViewById(R.id.bottomNavigationView)
 
-        bottomNavigationView.setOnItemSelectedListener(this)
 
+        bottomNavigationView.setOnItemSelectedListener(this)
         supportFragmentManager.beginTransaction().add(R.id.linearLayout, DesignerHomeFragment()).commit()
 
+
+        //val keyHash = Utility.getKeyHash(this)
+        //Log.e("해시키", keyHash)
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
